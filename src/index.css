@@ -1,0 +1,52 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.nav-container {
+  background: #873f3d;
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-icons a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.hamburger {
+  background: white;
+  border: none;
+  font-size: 24px;
+  color: black;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 50%;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
