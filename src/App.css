@@ -1,10 +1,26 @@
 #root {
-  max-width: 1280px;
+  max-width: 1980px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
-.logo{
-  width: 150px;
-  height: auto;
+
+
+.hero-container{
+ max-width: 1980px;
+ width: 100vw;
+ background-image: url(assets/Rukky-Ladoja-on-Building-a-Socially-Responsible-Nigerian-Fashion-Brand-Dye-Lab.-Photo-Credit-Okay-Africa.webp);
+ background-repeat: none;
+ background-size:cover;
+}
+
+@media screen and (min-width:375px)
+{
+  .hero-container {
+    background-size:cover;
+    background-repeat: none;
+    /* max-width: 390px; */
+    /* width: 1980px; */
+    min-height: 100vh;
+  }
 }

@@ -7,10 +7,10 @@ import { Menu, X } from 'lucide-react';
 import logo from '../assets/Tisora.jpg';
 
 const NavLinks = () => (
-  <div className="nav-links">
-    <NavLink to="/newIn">NEW IN</NavLink>
-    <NavLink to="/shop">SHOP</NavLink>
-    <NavLink to="/discover">DISCOVER</NavLink>
+  <div className="nav-links1">
+    <NavLink to="/newIn" style={{textDecoration:'none', color:'white'}}>NEW IN</NavLink>
+    <NavLink to="/shop" style={{textDecoration:'none', color:'white'}}>SHOP</NavLink>
+    <NavLink to="/discover" style={{textDecoration:'none', color:'white'}}>DISCOVER</NavLink>
   </div>
 );
 
@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <div className="container-fluid nav-container">
-      <nav className="row justify-content-between align-items-center w-100 p-3">
+      <nav className="row justify-content-between align-items-center">
         
         {/* Logo */}
         <div className="col-lg-2 col-6 d-flex justify-content-start">
@@ -37,7 +37,7 @@ const Nav = () => {
         <div className="col-lg-4 col-6 d-flex justify-content-end align-items-center">
           
           {/* Icons */}
-          <div className="nav-icons d-flex gap-3">
+          <div className="nav-icons d-flex gap-10">
             <NavLink to="/search">
               <FontAwesomeIcon icon={faSearch} />
             </NavLink>
@@ -60,6 +60,7 @@ const Nav = () => {
       {isOpen && (
         <div className="mobile-menu d-lg-none">
           <NavLinks />
+          <nav-icons />
         </div>
       )}
     </div>
