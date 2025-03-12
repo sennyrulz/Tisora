@@ -18,7 +18,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="container-fluid nav-container">
+    <div className="container-fluid nav-container px-5">
       <nav className="row justify-content-between align-items-center">
         
         {/* Logo */}
