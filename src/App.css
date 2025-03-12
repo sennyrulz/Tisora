@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: -411px;
+  margin-top: -460px;
 }
 
 /* Hero Banner Image */
@@ -23,6 +23,19 @@
   width: 90%;
   height: 60%;
   object-fit: cover;
+}
+
+@media screen and (min-width:375px) {
+  .hero-container {
+    width: 100vw;
+  height: 100vh; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -360px;
+  }
 }
 
 /* Social Media Icons */
@@ -46,4 +59,21 @@
 .social-icons img:hover {
   transform: scale(1.1);
   opacity: 0.8;
+}
+
+.cardScroll{
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+
+
+@media screen and (min-width:375px) {
+  .singleCard {
+  position: relative;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  
+  }
 }

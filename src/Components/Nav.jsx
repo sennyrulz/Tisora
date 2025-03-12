@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '../assets/Tisora.jpg';
 
 const NavLinks = () => (
-  <div className="nav-links1">
+  <div className="nav-links1 py-2 ps-6">
     <NavLink onClick={()=>setVisible(false)} to="/newIn" style={{textDecoration:'none', color:'white'}}>NEW IN</NavLink>
     <NavLink onClick={()=>setVisible(false)} to="/shop" style={{textDecoration:'none', color:'white'}}>SHOP</NavLink>
     <NavLink onClick={()=>setVisible(false)} to="/discover" style={{textDecoration:'none', color:'white'}}>DISCOVER</NavLink>

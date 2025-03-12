@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Nav from './components/Nav'
 import NewIn from './components/pages/NewIn';
 import Shop from './components/pages/Shop';
@@ -28,12 +28,21 @@ function App() {
       </Routes>
       <HeroBanner />
       <div>
-      <div className='flex row'>
-            <h2>Featured products</h2>
-            <p>View All</p>
-        </div>
-        <Card />
-        
+        <div className='cardContainer px-5'>
+          <h2 className='text-start'>Featured products</h2>
+          <p className='text-end'>
+            <Link to="/shop" >View All</Link> 
+          </p>
+          </div>
+          <div className='cardScroll d-flex px-3'>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+         
       </div>
     </>
   );
