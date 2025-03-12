@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from './components/pages/Logo';
 import HeroBanner from './components/HeroBanner';
+import Card from './components/Card';
 import './App.css';
 
 function App() {
@@ -26,6 +27,14 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <HeroBanner />
+      <div>
+      <div className='flex row'>
+            <h2>Featured products</h2>
+            <p>View All</p>
+            <Card />
+        </div>
+        
+      </div>
     </>
   );
 }

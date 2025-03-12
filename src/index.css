@@ -48,6 +48,7 @@ body {
 .nav-icons {
   display: flex;
   gap: 15px;
+  margin-right: 10px;
 }
 
 .nav-icons a {
@@ -74,10 +75,10 @@ body {
 .mobile-menu {
   position: absolute;
   top: 90px;
-  right: 0;
+  right: 10px;
   width: 200px;
   height: 200px;
-  background: #853c38;
+  background: #853c38c3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +106,7 @@ body {
 
   @media screen and (max-width:600px) {
   .nav-links1 {
-    display:contents;
+    display: contents;
     text-wrap: 10px;
     font-weight: bold;
     color: #ffffff;
