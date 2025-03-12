@@ -18,7 +18,31 @@ function App() {
     <>
       <Nav />
       <Routes>
-        <Route path="/" element={< Logo/>} /> 
+        {/* Home Page Route */}
+        <Route path="/" element={
+          <>
+            <Logo />
+            <HeroBanner />
+            <div>
+              <div className='cardContainer px-5'>
+                <h2 className='text-start'>Featured products</h2>
+                <p className='text-end'>
+                  <Link to="/shop">View All</Link>
+                </p>
+              </div>
+              <div className='cardScroll d-flex px-3'>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+              </div>
+            </div>
+          </>
+        } />
+        
+        {/* Other Page Routes */}
         <Route path="/newIn" element={<NewIn />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/discover" element={<Discover />} />
@@ -26,24 +50,6 @@ function App() {
         <Route path="/user" element={<User />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <HeroBanner />
-      <div>
-        <div className='cardContainer px-5'>
-          <h2 className='text-start'>Featured products</h2>
-          <p className='text-end'>
-            <Link to="/shop" >View All</Link> 
-          </p>
-          </div>
-          <div className='cardScroll d-flex px-3'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-         
-      </div>
     </>
   );
 }
