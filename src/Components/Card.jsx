@@ -3,8 +3,8 @@ import cardImg from '../assets/model.jpg'
 
 const Card = () => {
   return (
-    <div className='singleCard p-4'>
-      <div className='text-start bg-white' style={{boxShadow: '4px 4px 5px rgba: 0,0,0, 0.5', width: '375px', height: '600px' }}>
+    <div className='singleCard p-3 px-3 border border-1 mx-3 shadow-sm'>
+      <div className='text-start bg-white ' style={{ width: '375px', height: '600px' }}>
         <img src={cardImg} alt="card Img" className="cardImg img-fluid" />
           <div>
             <h3 className='px-3 py-1'>Product Name</h3>

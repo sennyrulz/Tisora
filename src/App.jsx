@@ -24,13 +24,13 @@ function App() {
             <Logo />
             <HeroBanner />
             <div>
-              <div className='cardContainer px-5'>
+              <div className='cardContainer px-5' style={{margin:'-50px 0 0 0'}}>
                 <h2 className='text-start'>Featured products</h2>
                 <p className='text-end'>
                   <Link to="/shop">View All</Link>
                 </p>
               </div>
-              <div className='cardScroll d-flex px-3'>
+              <div className='cardScroll d-flex px-5'>
                 <Card />
                 <Card />
                 <Card />
