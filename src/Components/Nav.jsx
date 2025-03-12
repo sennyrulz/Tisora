@@ -8,9 +8,9 @@ import logo from '../assets/Tisora.jpg';
 
 const NavLinks = () => (
   <div className="nav-links1">
-    <NavLink to="/newIn" style={{textDecoration:'none', color:'white'}}>NEW IN</NavLink>
-    <NavLink to="/shop" style={{textDecoration:'none', color:'white'}}>SHOP</NavLink>
-    <NavLink to="/discover" style={{textDecoration:'none', color:'white'}}>DISCOVER</NavLink>
+    <NavLink onClick={()=>setVisible(false)} to="/newIn" style={{textDecoration:'none', color:'white'}}>NEW IN</NavLink>
+    <NavLink onClick={()=>setVisible(false)} to="/shop" style={{textDecoration:'none', color:'white'}}>SHOP</NavLink>
+    <NavLink onClick={()=>setVisible(false)} to="/discover" style={{textDecoration:'none', color:'white'}}>DISCOVER</NavLink>
   </div>
 );
 

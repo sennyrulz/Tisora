@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from './components/pages/Logo';
 import HeroBanner from './components/HeroBanner';
-import Card from './components/Card';
+import Card from './components/card';
 import './App.css';
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
       <div className='flex row'>
             <h2>Featured products</h2>
             <p>View All</p>
-            <Card />
         </div>
+        <Card />
         
       </div>
     </>
