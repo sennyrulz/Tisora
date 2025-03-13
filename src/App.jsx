@@ -1,17 +1,18 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Nav from './components/Nav'
-import NewIn from './components/pages/NewIn';
-import Shop from './components/pages/Shop';
-import Discover from './components/pages/Discover';
+import NewIn from './pages/NewIn';
+import Shop from './pages/Shop';
+import Discover from './pages/Discover';
 import Search from './components/Search';
 import User from './components/User';
 import Cart from './components/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Logo from './components/pages/Logo';
+import Logo from './pages/Logo';
 import HeroBanner from './components/HeroBanner';
 import Card from './components/card';
 import BrandTopic from './components/brandTopic';
+import Footer from './components/footer'
 import './App.css';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               </div>
             </div>
             <BrandTopic />
+            <Footer />
           </>
         } />
         

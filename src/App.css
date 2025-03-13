@@ -149,6 +149,7 @@
 
 .container-Brand-Topic{
   width: 100vw;
+  height: 90vh;
   background-color: #faf7f7;
 }
 
@@ -156,12 +157,13 @@
   width: 90vw;
 }
 
-.Btn-Brand-Topic{
-  margin-left: 500px;
-  padding-bottom: 200px;
-}
+
 
 .Btn-Brand-Topic:hover {
   background-color: rgb(255, 255, 255) !important;
   color: #0a0a0a !important;
+}
+
+.footer-container{
+  width: 100vw;
 }
