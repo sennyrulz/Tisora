@@ -121,6 +121,21 @@
   display: none;
 }
 
+.singleCard {
+  transition: filter 0.3s ease-in-out;
+}
+
+.singleCard:hover {
+  filter: brightness(1.1);
+}
+
+.Btn-Option:hover {
+  background-color: rgb(255, 255, 255) !important;
+  border: 2px solid #0a0a0a;
+  color: #0a0a0a !important;
+}
+
+
 @media screen and (min-width:375px) {
   .singleCard {
   position: relative;
@@ -131,10 +146,6 @@
   }
 }
 
-.Btn-Option:hover {
-  background-color: rgb(255, 255, 255) !important;
-  color: #0a0a0a !important;
-}
 
 .container-Brand-Topic{
   width: 100vw;
