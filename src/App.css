@@ -15,38 +15,88 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: -460px;
 }
 
 /* Hero Banner Image */
 .hero-container .heroBanner1 {
-  width: 90%;
+  width: 80%;
   height: 60%;
   object-fit: cover;
 }
 
-@media screen and (min-width:375px) {
+@media screen and (max-width:480px) {
   .hero-container {
-    width: 100vw;
-  height: 100vh; 
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-top: -360px;
+    margin-top: 300px;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-container .heroBanner1 {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .social-icons {
+    position: absolute;
+    left: 100px; /* Adjust left positioning */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Spacing between icons */
+  }
+  
+  .social-icons img {
+    width: 30px; /* Adjust icon size */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 }
+  /* Tablets (landscape and portrait) */
+@media screen and (min-width: 768px) {
+  .hero-container {
+    height: 85vh;
+  }
+
+  .hero-container .heroBanner1 {
+    width: 80%;
+    height: 55%;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    height: 100vh;
+  }
+
+  /* Tablets (481px - 1023px) */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .hero-container {
+    height: 90vh; /* Slightly shorter than desktop */
+  }
+}
+
+  .hero-container .heroBanner1 {
+    width: 85%;
+    height: 60%;
+  }
+}
+
+
 
 /* Social Media Icons */
 .social-icons {
   position: absolute;
-  left: 20px; /* Adjust left positioning */
+  left: 100px; /* Adjust left positioning */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Spacing between icons */
+  gap: 40px; /* Spacing between icons */
 }
 
 .social-icons img {
@@ -64,9 +114,12 @@
 .cardScroll{
   overflow: hidden;
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-
+.cardScroll::-webkit-scrollbar {
+  display: none;
+}
 
 @media screen and (min-width:375px) {
   .singleCard {
@@ -76,4 +129,28 @@
   justify-content: center;
   
   }
+}
+
+.Btn-Option:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: #0a0a0a !important;
+}
+
+.container-Brand-Topic{
+  width: 100vw;
+  background-color: #faf7f7;
+}
+
+.Brand-Topic{
+  width: 90vw;
+}
+
+.Btn-Brand-Topic{
+  margin-left: 500px;
+  padding-bottom: 200px;
+}
+
+.Btn-Brand-Topic:hover {
+  background-color: rgb(255, 255, 255) !important;
+  color: #0a0a0a !important;
 }

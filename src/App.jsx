@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from './components/pages/Logo';
 import HeroBanner from './components/HeroBanner';
 import Card from './components/card';
+import BrandTopic from './components/brandTopic';
 import './App.css';
 
 function App() {
@@ -24,14 +25,13 @@ function App() {
             <Logo />
             <HeroBanner />
             <div>
-              <div className='cardContainer px-5' style={{margin:'-50px 0 0 0'}}>
-                <h2 className='text-start'>Featured products</h2>
-                <p className='text-end'>
+              <div className='cardContainer px-5' style={{margin:'-60px 0 0 0'}}>
+                <h2 className='text-start px-4'>Featured products</h2>
+                <p className='text-end px-4'>
                   <Link to="/shop">View All</Link>
                 </p>
               </div>
-              <div className='cardScroll d-flex px-5'>
-                <Card />
+              <div className='cardScroll d-flex px-5 mb-5'>
                 <Card />
                 <Card />
                 <Card />
@@ -39,6 +39,7 @@ function App() {
                 <Card />
               </div>
             </div>
+            <BrandTopic />
           </>
         } />
         

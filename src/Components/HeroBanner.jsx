@@ -7,8 +7,8 @@ import TikTok from '../assets/Tiktok.png'
 
 const HeroBanner = () => {
   return (
-    <div className='hero-container'>
-      <img className='heroBanner1' src={heroImage} alt="Hero Banner" />
+    <div className='hero-container' style={{height: "450px", margin: '-898px 0 200px 0'}}>
+      <img className='heroBanner1' style={{height: "450px" }} src={heroImage} alt="Hero Banner" />
       
       <div className='social-icons'>
           <img src={whatsapp} alt="Whatsapp" />

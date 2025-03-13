@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background-color: #eae8e8;
 }
 /* Navigation Container */
 .nav-container {
@@ -59,6 +60,30 @@ body {
 
 .nav-icons a:hover {
   color: gray;
+}
+
+/* Mobile screens (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .nav-icons {
+    gap: 10px; /* Reduce spacing */
+    margin-right: 5px;
+  }
+
+  .nav-icons a {
+    font-size: 16px; /* Reduce icon size */
+  }
+}
+
+/* Tablets (481px - 1023px) */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .nav-icons {
+    gap: 12px;
+    margin-right: 8px;
+  }
+
+  .nav-icons a {
+    font-size: 18px;
+  }
 }
 
 /* Hamburger Button */

@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/Tisora.jpg';
+import logo from '../assets/Tisora.svg';
 
 const NavLinks = () => (
-  <div className="nav-links1 py-2 ps-6">
+  <div className="nav-links1 py-2 d-flex justify-center">
     <NavLink onClick={()=>setVisible(false)} to="/newIn" style={{textDecoration:'none', color:'white'}}>NEW IN</NavLink>
     <NavLink onClick={()=>setVisible(false)} to="/shop" style={{textDecoration:'none', color:'white'}}>SHOP</NavLink>
     <NavLink onClick={()=>setVisible(false)} to="/discover" style={{textDecoration:'none', color:'white'}}>DISCOVER</NavLink>
