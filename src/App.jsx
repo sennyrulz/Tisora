@@ -38,7 +38,7 @@ function App() {
                   </p>
                 </div>
                 {/* Product Scroll */}
-                <div className="cardScroll d-flex px-5 mb-5 overflow-auto" style={{ whiteSpace: "nowrap" }}>
+                <div className="cardScroll d-flex px-5 gap-5 mb-5 overflow-auto" style={{ whiteSpace: "nowrap" }}>
                   {featuredProducts.map((product) => (
                     <div key={product.id} style={{ flex: "0 0 auto", scrollSnapAlign: "start" }}>
                       <ProductCard id={product.id} name={product.name} price={product.price} />

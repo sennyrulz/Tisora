@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row, Form, Card } from 'react-bootstrap';
 import cardImg from '../assets/model.jpg';
 import { productsData } from "../components/productsData"; 
