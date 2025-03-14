@@ -1,49 +1,43 @@
-
-import React from "react";
-import { Card } from "react-bootstrap"; 
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import cardImg from "../assets/model.jpg";
 
-// Sample product data
-const productsData = [
-  { id: 1, name: 'Product A', price: 25000 },
-  { id: 2, name: 'Product B', price: 45000 },
-  { id: 3, name: 'Product C', price: 15000 },
-  { id: 4, name: 'Product D', price: 60000 }
-];
-
-const ProductCard = ({ name, price }) => {
-  const navigate = useNavigate();
+const ProductCard = ({ id, name, price }) => {
+  const [isOverlayVisible, setOverlayVisible] = useState(false);
 
   return (
-      <div className="singleCard p-3 px-3 border border-1 mx-3 shadow-sm w-auto">
-          {/* Image Container */}
-          <div className="bg-secondary" style={{ height: '400px', width: '330px'}}>
-            <img src={cardImg} alt="" className="w-100 h-100" style={{ objectFit: 'cover' }} />
-          </div>
-    
-          {/* Product Details */}
-          <div className="text-start">
-            <h5 className="mt-3">{name}</h5>
-            <p className="fw-bold text-success">₦{price}</p>
-            <button className="Btn-Option bg-black text-white p-2 px-5 border w-100 hover:bg-white hover:text-black transition-all duration-300">
-              Choose Options</button>
+    <>
+      <div className="singleCard p-3 px-3 border border-1 mx-3 shadow-sm w-100">
+        <div className="bg-secondary" style={{ height: '400px' }}>
+          <img src={cardImg} alt={name} className="w-100 h-100" style={{ objectFit: 'cover' }} />
+        </div>
+
+        <div className="text-start">
+          <h5 className="mt-3">{name}</h5>
+          <p className="fw-bold text-success">₦{price}</p>
+          <button 
+            onClick={() => setOverlayVisible(true)} 
+            className="Btn-Option bg-black text-white p-2 px-5 border w-100 hover:bg-white hover:text-black transition-all duration-300">
+            Choose Options
+          </button>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {isOverlayVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-4 rounded-lg shadow-lg w-80">
+            <h2 className="text-xl font-bold mb-4">{name} Options</h2>
+            <p>Price: ₦{price}</p>
+            <button 
+              onClick={() => setOverlayVisible(false)}
+              className="Btn-Option bg-black text-white p-2 px-5 border w-100 hover:bg-white hover:text-black transition-all duration-300">
+              Close
+            </button>
           </div>
         </div>
-      );
-    };
-
-
-    // Component for listing all products i.e the ProductData object
-    // const Products = () => {
-    //   return (
-    //     <div className="d-flex flex-wrap gap-4">
-    //       {productsData.map((product) => (
-    //         <ProductCard key={product.id} name={product.name} price={product.price} />
-    //       ))}
-    //     </div>
-    //   );
-    // } 
+      )}
+    </>
+  );
+};
 
 export default ProductCard;
-

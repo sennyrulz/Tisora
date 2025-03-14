@@ -1,51 +1,57 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import Nav from './components/Nav'
-import NewIn from './pages/NewIn';
-import Shop from './pages/Shop';
-import Discover from './pages/Discover';
-import Search from './components/Search';
-import User from './components/User';
-import Cart from './components/Cart';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Logo from './pages/Logo';
-import HeroBanner from './components/HeroBanner';
-import ProductCard from './components/ProductCard';
-import BrandTopic from './components/brandTopic';
-import Footer from './components/footer'
-import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import Nav from "./components/Nav";
+import NewIn from "./pages/NewIn";
+import Shop from "./pages/Shop";
+import Discover from "./pages/Discover";
+import Search from "./components/Search";
+import User from "./components/User";
+import Cart from "./components/Cart";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Logo from "./pages/Logo";
+import HeroBanner from "./components/HeroBanner";
+import ProductCard from "./components/ProductCard";
+import BrandTopic from "./components/brandTopic";
+import Footer from "./components/footer";
+import { productsData } from "./components/productsData"; 
+import "./App.css";
 
 function App() {
+  // Get only the first 5 products for the homepage
+  const featuredProducts = productsData.slice(0, 5);
+
   return (
     <>
       <Nav />
       <Routes>
-        {/* Home Page Route */}
-        <Route path="/" element={
-          <>
-            <Logo />
-            <HeroBanner />
-            <div>
-              <div className='cardContainer px-5' style={{margin:'-60px 0 0 0'}}>
-                <h2 className='text-start px-4'>Featured products</h2>
-                <p className='text-end px-4'>
-                  <Link to="/shop">View All</Link>
-                </p>
+        <Route
+          path="/"
+          element={
+            <>
+              <Logo />
+              <HeroBanner />
+              <div>
+                <div className="cardContainer px-5" style={{ margin: "-60px 0 0 0" }}>
+                  <h2 className="text-start px-4">Featured Products</h2>
+                  <p className="text-end px-4">
+                    <Link to="/shop">View All</Link>
+                  </p>
+                </div>
+                {/* Product Scroll */}
+                <div className="cardScroll d-flex px-5 mb-5 overflow-auto" style={{ whiteSpace: "nowrap" }}>
+                  {featuredProducts.map((product) => (
+                    <div key={product.id} style={{ flex: "0 0 auto", scrollSnapAlign: "start" }}>
+                      <ProductCard id={product.id} name={product.name} price={product.price} />
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className='cardScroll d-flex px-5 mb-5'>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-              </div>
-            </div>
-            <BrandTopic />
-            <Footer />
-          </>
-        } />
-        
+              <BrandTopic />
+              <Footer />
+            </>
+          }
+        />
+
         {/* Other Page Routes */}
         <Route path="/newIn" element={<NewIn />} />
         <Route path="/shop" element={<Shop />} />
