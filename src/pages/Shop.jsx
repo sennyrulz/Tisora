@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Row, Form, Card } from 'react-bootstrap';
+import { Col, Container, Row, Form } from 'react-bootstrap';
 import cardImg from '../assets/model.jpg';
 import productsData from '../components/productsData'
 
@@ -41,8 +41,8 @@ const Shop = () => {
       {/* Header & Sorting */}
       <Row>
         <Col md={6} className='d-flex flex-column'>
-          <h3 className='fw-medium mt-5' style={{ marginRight: '26rem' }}>Product</h3>
-          <div className='d-flex align-items-center gap-2' style={{ marginTop: '-30px' }}>
+          <h3 className='fw-medium mt-5' style={{ marginRight: '30rem' }}>Product</h3>
+          <div className='d-flex align-items-center gap-2' style={{ marginTop: '-32px' }}>
             <p className='text-muted mb-0'>Sort by:</p>
             <Form.Select
               className='mx-2 my-5'

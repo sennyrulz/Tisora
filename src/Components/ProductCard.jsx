@@ -33,5 +33,17 @@ const ProductCard = ({ name, price }) => {
       );
     };
 
+
+    // Component for listing all products i.e the ProductData object
+    // const Products = () => {
+    //   return (
+    //     <div className="d-flex flex-wrap gap-4">
+    //       {productsData.map((product) => (
+    //         <ProductCard key={product.id} name={product.name} price={product.price} />
+    //       ))}
+    //     </div>
+    //   );
+    // } 
+
 export default ProductCard;
 
