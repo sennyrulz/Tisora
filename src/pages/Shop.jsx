@@ -13,19 +13,20 @@ const productsData = [
 // Card Component
 const ProductCard = ({ name, price }) => {
   return (
-    <Card className="shadow-sm border-0 w-100">
+    <div className="singleCard p-3 px-3 border border-1 mx-3 shadow-sm w-100">
       {/* Image Container */}
       <div className="bg-secondary" style={{ height: '400px' }}>
         <img src={cardImg} alt="" className="w-100 h-100" style={{ objectFit: 'cover' }} />
       </div>
 
       {/* Product Details */}
-      <Card.Body className="text-center">
+      <div className="text-start">
         <h5 className="mt-3">{name}</h5>
         <p className="fw-bold text-success">₦{price}</p>
-        <button className="btn btn-dark w-100">Choose Options</button>
-      </Card.Body>
-    </Card>
+        <button className="Btn-Option bg-black text-white p-2 px-5 border w-100 hover:bg-white hover:text-black transition-all duration-300">
+          Choose Options</button>
+      </div>
+    </div>
   );
 };
 
@@ -47,15 +48,14 @@ const Shop = () => {
       {/* Header & Sorting */}
       <Row>
         <Col md={6} className='d-flex flex-column'>
-          <h3 className='fw-medium mt-5' style={{ marginRight: '26rem' }}>PRODUCTS</h3>
+          <h3 className='fw-medium mt-5' style={{ marginRight: '26rem' }}>Product</h3>
           <div className='d-flex align-items-center gap-2' style={{ marginTop: '-30px' }}>
             <p className='text-muted mb-0'>Sort by:</p>
             <Form.Select
               className='mx-2 my-5'
               onChange={(e) => handleSort(e.target.value)}
               value={sort}
-              style={{ maxWidth: '200px' }}
-            >
+              style={{ maxWidth: '200px' }}>
               <option value='low-to-high'>Price, (Min price)</option>
               <option value='high-to-low'>Price, (Max price)</option>
             </Form.Select>

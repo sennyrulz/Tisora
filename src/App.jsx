@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from './pages/Logo';
 import HeroBanner from './components/HeroBanner';
-import Card from './components/card';
+import ProductCard from './components/ProductCard';
 import BrandTopic from './components/brandTopic';
 import Footer from './components/footer'
 import './App.css';
@@ -33,11 +33,12 @@ function App() {
                 </p>
               </div>
               <div className='cardScroll d-flex px-5 mb-5'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
               </div>
             </div>
             <BrandTopic />
