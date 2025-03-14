@@ -145,3 +145,90 @@ body {
     display: flex;
   }
 }
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .nav-container {
+    padding: 18px 25px; /* Slightly increase padding for better spacing */
+  }
+
+  .logo {
+    max-width: 140px; /* Slightly increase logo size */
+  }
+
+  .nav-links1 {
+    gap: 35px; /* Increase gap between navigation links */
+  }
+
+  .nav-links1 a {
+    font-size: 18px; /* Increase font size for better readability */
+  }
+
+  .nav-icons {
+    gap: 18px; /* Increase spacing between icons */
+  }
+
+  .nav-icons a {
+    font-size: 22px; /* Slightly increase icon size */
+  }
+
+  .hamburger {
+    font-size: 26px; /* Adjust size of hamburger icon */
+  }
+
+  .mobile-menu {
+    top: 100px; /* Adjust position for consistency */
+    right: 20px;
+    width: 220px;
+    height: auto;
+    padding: 25px;
+  }
+
+  .mobile-menu .nav-links1 a {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (min-width: 1441px) {
+  .nav-container {
+    padding: 20px 30px; /* Increase padding for better spacing */
+  }
+
+  .logo {
+    max-width: 150px; /* Increase logo size for visibility */
+  }
+
+  .nav-links1 {
+    gap: 40px; /* Increase space between navigation links */
+  }
+
+  .nav-links1 a {
+    font-size: 20px; /* Make links more readable */
+  }
+
+  .nav-icons {
+    gap: 20px; /* Increase spacing between icons */
+  }
+
+  .nav-icons a {
+    font-size: 24px; /* Slightly enlarge icons */
+  }
+
+  .hamburger {
+    font-size: 28px; /* Adjust size of hamburger menu */
+  }
+
+  .mobile-menu {
+    top: 110px; /* Adjust positioning */
+    right: 30px;
+    width: 240px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .mobile-menu .nav-links1 a {
+    font-size: 22px;
+  }
+}
+

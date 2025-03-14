@@ -1,169 +1,183 @@
-#root {
-  max-width: 1980px;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-
-
-/* Hero Container */
-.hero-container {
-  width: 100vw;
-  height: 100vh; 
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Hero Banner Image */
-.hero-container .heroBanner1 {
-  width: 80%;
-  height: 60%;
-  object-fit: cover;
-}
-
-@media screen and (max-width:480px) {
-  .hero-container {
-    margin-top: 300px;
-    height: 100vh;
+/* ===================
+   GLOBAL STYLES
+   =================== */
+   #root {
+    max-width: 1980px;
+    margin: 0 auto;
     padding: 0;
-    overflow: hidden;
+    text-align: center;
   }
-
+  
+  /* Hero Section */
+  .hero-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 260px;
+  }
+  
   .hero-container .heroBanner1 {
     width: 80%;
     height: 60%;
     object-fit: cover;
   }
-
+  
+  /* Social Media Icons */
   .social-icons {
     position: absolute;
-    left: 100px; /* Adjust left positioning */
+    left: 100px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Spacing between icons */
+    gap: 40px;
   }
   
   .social-icons img {
-    width: 30px; /* Adjust icon size */
+    width: 30px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-}
-  /* Tablets (landscape and portrait) */
-@media screen and (min-width: 768px) {
-  .hero-container {
-    height: 85vh;
-  }
-
-  .hero-container .heroBanner1 {
-    width: 80%;
-    height: 55%;
-  }
-}
-
-/* Large screens */
-@media screen and (min-width: 1024px) {
-  .hero-container {
-    height: 100vh;
-  }
-
-  /* Tablets (481px - 1023px) */
-@media screen and (min-width: 481px) and (max-width: 1023px) {
-  .hero-container {
-    height: 90vh; /* Slightly shorter than desktop */
-  }
-}
-
-  .hero-container .heroBanner1 {
-    width: 85%;
-    height: 60%;
-  }
-}
-
-
-
-/* Social Media Icons */
-.social-icons {
-  position: absolute;
-  left: 100px; /* Adjust left positioning */
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Spacing between icons */
-}
-
-.social-icons img {
-  width: 30px; /* Adjust icon size */
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-.cardScroll{
-  overflow: hidden;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.cardScroll::-webkit-scrollbar {
-  display: none;
-}
-
-.singleCard {
-  transition: filter 0.3s ease-in-out;
-}
-
-.singleCard:hover {
-  filter: brightness(1.1);
-}
-
-.Btn-Option:hover {
-  background-color: rgb(255, 255, 255) !important;
-  border: 2px solid #0a0a0a;
-  color: #0a0a0a !important;
-}
-
-
-@media screen and (min-width:375px) {
-  .singleCard {
-  position: relative;
-  display:block;
-  align-items: center;
-  justify-content: center;
   
+  .social-icons img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
   }
-}
-
-
-.container-Brand-Topic{
-  width: 100vw;
-  height: 90vh;
-  background-color: #faf7f7;
-}
-
-.Brand-Topic{
-  width: 90vw;
-}
-
-
-
-.Btn-Brand-Topic:hover {
-  background-color: rgb(255, 255, 255) !important;
-  color: #0a0a0a !important;
-}
-
-.footer-container{
-  width: 100vw;
-}
+  
+  /* Scrollable Card */
+  .cardScroll {
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .cardScroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .singleCard {
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .singleCard:hover {
+    filter: brightness(1.1);
+  }
+  
+  /* Brand Topic */
+  .container-Brand-Topic {
+    width: 100vw;
+    height: 90vh;
+    background-color: #faf7f7;
+  }
+  
+  .Brand-Topic {
+    width: 90vw;
+  }
+  
+  /* Footer */
+  .footer-container {
+    width: 100vw;
+    padding-bottom: 20px;
+  }
+  
+  /* ===================
+     RESPONSIVE DESIGN
+     =================== */
+  
+  /* Small Devices (max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    .hero-container {
+      margin-top: 300px;
+      height: 100vh;
+      padding: 0;
+    }
+    
+    .hero-container .heroBanner1 {
+      width: 80%;
+      height: 60%;
+    }
+    
+    .social-icons {
+      left: 100px;
+      gap: 40px;
+    }
+  }
+  
+  /* Tablets (481px - 1023px) */
+  @media screen and (min-width: 481px) and (max-width: 1023px) {
+    .hero-container {
+      height: 90vh;
+    }
+    
+    .hero-container .heroBanner1 {
+      width: 85%;
+      height: 60%;
+    }
+  }
+  
+  /* Medium Devices (min-width: 768px) */
+  @media screen and (min-width: 768px) {
+    .hero-container {
+      height: 85vh;
+    }
+    
+    .hero-container .heroBanner1 {
+      width: 80%;
+      height: 55%;
+    }
+    
+    .brandImg {
+      height: 450px !important;
+    }
+  }
+  
+  /* Large Devices (1024px - 1440px) */
+  @media screen and (min-width: 1024px) and (max-width: 1440px) {
+    #root {
+      max-width: 1440px;
+      padding: 0 20px;
+    }
+    
+    .hero-container {
+      height: 95vh;
+    }
+    
+    .hero-container .heroBanner1 {
+      width: 85%;
+      height: 65%;
+    }
+  }
+  
+  /* Extra Large Devices (min-width: 1441px) */
+  @media screen and (min-width: 1441px) {
+    #root {
+      max-width: 1980px;
+      padding: 0 40px;
+    }
+    
+    .hero-container {
+      height: 100vh;
+      margin-top: 0px;
+    }
+    
+    .hero-container .heroBanner1 {
+      width: 90%;
+      height: 70%;
+    }
+    
+    .social-icons {
+      left: 30px;
+      gap: 50px;
+    }
+    
+    .social-icons img {
+      width: 35px;
+    }
+  }
+  
