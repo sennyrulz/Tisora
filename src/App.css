@@ -81,9 +81,14 @@
   }
   
   /* Footer */
-  .footer-container {
+  /* .footer-container {
     width: 100vw;
     padding-bottom: 20px;
+  } */
+
+  .copyright-text {
+    font-size: 14px;
+    margin-top: 2px;
   }
   
   /* ===================

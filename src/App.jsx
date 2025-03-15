@@ -12,9 +12,10 @@ import Logo from "./pages/Logo";
 import HeroBanner from "./components/HeroBanner";
 import ProductCard from "./components/ProductCard";
 import BrandTopic from "./components/brandTopic";
-import Footer from "./components/footer";
+import Footer from "./Components/footer";
 import { productsData } from "./components/productsData"; 
 import "./App.css";
+import NewsLetterBox from "./Components/NewsLetterBox";
 
 function App() {
   // Get only the first 5 products for the homepage
@@ -47,7 +48,6 @@ function App() {
                 </div>
               </div>
               <BrandTopic />
-              <Footer />
             </>
           }
         />
@@ -60,6 +60,8 @@ function App() {
         <Route path="/user" element={<User />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <NewsLetterBox />
+      <Footer /> {/* This will make the footer appear on every page */}
     </>
   );
 }
