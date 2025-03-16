@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // Sample cart items (set to [] for empty cart)
 const cartItems = []; // Change this to [] to test empty cart state
@@ -18,8 +19,8 @@ const Cart = () => {
           <div id="empty-block" className="mx-auto text-center" style={{ maxWidth: '600px' }}>
             <h1 className="fw-normal">Your cart is empty</h1>
             <div className="mt-4 mb-5 d-flex justify-content-center">
-              <Button href="/shop" variant="dark" className="px-4 py-3 w-100 discover_button" style={{ maxWidth: '200px' }}>
-                Continue Shopping
+              <Button href="/shop" variant="dark" className="px-3 py-2 w-100 discover_button" style={{ maxWidth: '200px' }}>
+                Continue shopping
               </Button>
             </div>
           </div>
@@ -28,7 +29,7 @@ const Cart = () => {
         {/* Cart Structure (Always Visible) */}
         <div className="d-flex justify-content-between align-items-center">
           <h1 className="fw-normal">Your cart</h1>
-          <a href="/shop" className="text-decoration-underline">Continue shopping</a>
+          <a href="/shop" className="text-decoration-underline" style={{ color: 'black' }}>Continue shopping</a>
         </div>
 
         {/* Cart Headings */}
@@ -70,13 +71,13 @@ const Cart = () => {
               <p id="Subtotal">₦{calculateTotal().toLocaleString()} NGN</p>
             </div>
             <div>
-              Taxes and <a href="/shipping-policy" className="text-decoration-underline">shipping</a> calculated at checkout
+              Taxes and <a href="/shipping-policy" className="text-decoration-underline" style={{ color: 'black' }}>shipping</a> calculated at checkout
             </div>
-            <a href="/checkout">
-              <Button variant="dark" className="w-100 my-4 discover_button">
-                Check Out
+            <Link to="/checkout">
+              <Button variant="dark" className="w-100 my-5 discover_button">
+                Check out
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
