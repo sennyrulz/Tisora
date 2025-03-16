@@ -16,6 +16,7 @@ import Footer from "./Components/footer";
 import { productsData } from "./components/productsData"; 
 import "./App.css";
 import NewsLetterBox from "./Components/NewsLetterBox";
+import Checkout from "./Components/checkout";
 
 function App() {
   // Get only the first 5 products for the homepage
@@ -59,6 +60,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/user" element={<User />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <NewsLetterBox />
       <Footer /> {/* This will make the footer appear on every page */}
